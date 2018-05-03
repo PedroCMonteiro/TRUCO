@@ -3,8 +3,16 @@
      LIS_tpCondRet ret;
      LIS_tppLista embaralhado;
      int random;
-    
-     embaralhado = ( LIS_tppLista* ) malloc( sizeof( LIS_tppLista ) );
+  
+     #ifdef _DEBUG
+         assert( baralho != NULL ) ;
+     #endif    
+  
+     #ifdef _DEBUG
+         assert( baralho->numElem <= 54 ) ;
+     #endif
+  
+     embaralhado = ( LIS_tppLista * ) malloc( sizeof( LIS_tppLista ) );
     
      if( embaralhado != NULL )
      {
@@ -17,8 +25,8 @@
      {
          return NULL;
     
-    
      srand( time( NULL ) );
+      
      while ( baralho )
      {
          IrInicioLista( baralho );
@@ -36,7 +44,7 @@
              continue ( );
          }
         
-         ret = LIS_InserirElementoApos( embaralho,LIS_ObterValor( baralho ) );
+         ret = LIS_InserirElementoApos( embaralho , LIS_ObterValor( baralho ) );
         
          if ( ret == LIS_CondRetFaltouMemoria )
          {
@@ -50,7 +58,7 @@
          }
         
      }
-     LIS_limparLista( baralho );
+     BAR_destruirBaralho( baralho );
     
      free( baralho );
     
