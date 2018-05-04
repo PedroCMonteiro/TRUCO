@@ -1,7 +1,7 @@
- LIS_tppLista embralhar(LIS_tppLista baralho)
+ BAR_tppBaralho embralhar(BAR_tppBaralho baralho)
  {
      LIS_tpCondRet ret;
-     LIS_tppLista embaralhado;
+     BAR_tppBaralho embaralhado;
      int random;
   
      #ifdef _DEBUG
@@ -12,7 +12,7 @@
          assert( baralho->numElem <= 54 ) ;
      #endif
   
-     embaralhado = ( LIS_tppLista * ) malloc( sizeof( LIS_tppLista ) );
+     embaralhado = ( BAR_tppBaralho * ) malloc( sizeof( BAR_tppBaralho ) );
     
      if( embaralhado != NULL )
      {
@@ -27,7 +27,7 @@
     
      srand( time( NULL ) );
       
-     while ( baralho )
+     while ( baralho->numELem > 0 )
      {
          IrInicioLista( baralho );
          random = rand % baralho->numElem;
@@ -51,7 +51,7 @@
              return NULL;
          }
         
-         ret = LIS_ExcluirElemento( baralho );
+         ret = BAR_RemoverCarta( baralho );
          if ( ret == LIS_CondRetListaVazia )
          {
              break ( );
