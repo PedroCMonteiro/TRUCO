@@ -1,8 +1,9 @@
  BAR_tppBaralho embralhar(BAR_tppBaralho baralho)
  {
-     LIS_tpCondRet ret;
-     BAR_tppBaralho embaralhado;
-     int random;
+     LIS_tpCondRet ret ;
+     BAR_tppBaralho embaralhado ;
+     BAR_tppCarta carta ;
+     int posicao ;
   
      #ifdef _DEBUG
          assert( baralho != NULL ) ;
@@ -19,7 +20,7 @@
          return NULL;
      }
     
-     embaralhado = LIS_CriarLista( );
+     embaralhado = BAR_CriarBaralho( );
     
      if( embaralhado != NULL )
      {
@@ -29,22 +30,23 @@
       
      while ( baralho->numELem > 0 )
      {
-         IrInicioLista( baralho );
-         random = rand % baralho->numElem;
+         IrTopoBaralho( baralho );
+         posicao = rand % baralho->numElem;
         
-         ret = LIS_AvancarElementoCorrente( baralho,random );
+         ret = LIS_AvancarElementoCorrente( baralho , posicao - 1 );
         
          if ( ret == LIS_CondRetListaVazia )
          {
-             break ( );
+             return NULL;
          }
         
          if ( ret == LIS_CondRetFimLista )
          {
              continue ( );
          }
-        
-         ret = LIS_InserirElementoApos( embaralho , LIS_ObterValor( baralho ) );
+      
+         BAR_ObterCarta( baralho , carta ) ;
+         ret = BAR_InserirCarta( embaralho , carta );
         
          if ( ret == LIS_CondRetFaltouMemoria )
          {
@@ -56,6 +58,8 @@
          {
              break ( );
          }
+      
+         BAR_DestruirCarta( carta ) ;
         
      }
      BAR_destruirBaralho( baralho );
