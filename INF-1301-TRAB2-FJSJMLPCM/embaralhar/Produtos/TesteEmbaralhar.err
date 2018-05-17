@@ -1,0 +1,13 @@
+TESTEMB.c
+EMBARALHAR.c
+BARALHO.c
+..\Fontes\BARALHO.c(55) : warning C4100: 'pCarta' : unreferenced formal parameter
+LISTA.c
+Microsoft (R) Incremental Linker Version 10.00.30319.01
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/OUT:..\Produtos\TRAB2-1.exe 
+/INCREMENTAL:NO 
+/MACHINE:IX86 
+TESTEMB.obj EMBARALHAR.obj BARALHO.obj LISTA.obj 
+ArcaboucoTeste.lib 

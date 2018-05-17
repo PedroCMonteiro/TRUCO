@@ -1,0 +1,16 @@
+RELATORIO-FRANCISCOSOUSA
+
+ Data ; Horas Trabalhadas ; Tipo Tarefa ; Descrição da Tarefa Realizada 
+
+04/04/2018 ; 2h ; estudar ; estudei como funcionava o jogo do truco.
+11/04/2018 ; 2h ; especificar os módulos ; especifiquei os modulos quais seriam os módulos e que releção eles teriam entre si
+27/04/2018 ; 1,5h ; projetar ; projetei os modulos a serem apresentados e as funções e suas ações.
+05/05/2018 ; 4h ; codificar ; codifiquei as funções dos módulos baralho.c, porém essas funções não serão usadas para o trabalho pois não estavam implementadas usando o módulo lista.
+05/05/2018 ;diagnosticar e corrigir os problemas encontrados; tentei corrigir os problemas referentes ao modulo lista disponibiliazado no arcabouço, para se adequar ao trabalho.
+07/05/2018 ; 5h ; revisar ; revisei todo o código elaborado pela equipe em busca de faltas.
+07/05/2018 ; 2h ; diagnosticar e corrigir os problemas encontrados  ; tentei encontrar e retirar todos os bugs e erros do trabalho.
+10/05/2018 ; 2h; revisar; revisei o script de teste do módulo lista.
+11/05/2018 ; 4h; codificar; codifiquei as alterações no script do módulo lista para ser compativel com os teste que serão feitos em nossos módulos que usem o módulo lista.
+
+
+Francisco J. Evangelista de Sousa-1121907

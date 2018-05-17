@@ -1,0 +1,25 @@
+Após ter descompactado a pasta INF1301-Trab2-JMLPCMFJS abra o prompt
+de comando no diretório Batches do módulo desejado a ser testado.
+
+Se quiser limpar tudo para recomeçar sem ter nada ainda execute o
+comando: LimpaTudo.bat que limpárá todos os arquivos a serem gerados
+durante o processo todo de compilar e testar o módulo.
+
+Execute o comando: vsvars32.bat para setar o ambiente para compilar.
+
+Se quiser executar tudo de uma vez basta apenas executar o comando
+Tudo.bat o qual compilará e mostrará no final o resultado da massa
+de teste do módulo e suas estatisticas,número linhas lidas no
+arquivo scrpit, casos de teste, comandos de teste e a quantidade
+de erros no script tudo isso só será mostrado se o programa compilar
+direito.
+
+Se quiser fazer passo a passo, primeiramente, ainda no diretório
+Batches do módulo requerido, execute o comando: GeraTudo.bat
+Assim gerará arquivos *.make *.list no diretório Composicao do
+módulo referente e *.build no diretório Objetos.
+Depois execute o comando: CompilaTudo.bat
+O qual gerará arquivos *.ojb no diretório Objetos e *.err com o
+executável no diretório Produtos
+Pot fim se executa o comando: TestaTudo.bat , gerando o arquivo *.estat
+de estatistias on diretório Produtos e imprimindo na tela qual foram elas.

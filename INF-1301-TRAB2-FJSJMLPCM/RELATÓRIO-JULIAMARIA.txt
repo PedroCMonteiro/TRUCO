@@ -1,0 +1,20 @@
+Data ; Horas Trabalhadas ; Tipo Tarefa ; Descrição da Tarefa Realizada 
+
+03/04/2018 ; 3h ; estudar ; estudei como funcionava o jogo do truco
+
+27/04/2018 ; 3h ; projetar ; projetei os modulos a serem apresentados e as funções e suas ações
+
+03/05/2018 ; 4h ; revisar projetos ; revisei o projeto até então e fiz algumas melhorias
+
+05/05/2018 ; 7h ; codificar módulo ; codifiquei os modulos baralho.c e baralho.h
+
+05/05/2018 ; 3h ; especificar os módulos ; especifiquei os modulos baralho.c e baralho.h
+
+06/05/2018 ; 3h ; especificar as funções ; especifiquei as funções dos modulos baralho.c e baralho.h
+
+06/05/2018 ; 8h ; diagnosticar e corrigir os problemas encontrados  ; tentei retirar todos os bugs e erros do trabalho
+
+07/05/2018 ; 5h ; revisar codigo do módulo ; revisei o codigo do modulo baralho
+
+
+Julia Maria Alves Lima dos Santos - 1511692

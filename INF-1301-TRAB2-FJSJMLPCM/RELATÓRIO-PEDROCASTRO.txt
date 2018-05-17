@@ -1,0 +1,22 @@
+   Data    ; Horas Trabalhadas ; Tipo Tarefa ; Descrição da Tarefa Realizada 
+           
+06/04/2018 ; 3h ; estudar ; estudei quais eram as regras o jogo do truco a ser implementado
+             
+11/04/2018 ; 4h ; especificar os módulos ; especifiquei os modulos quais seriam os módulos e que releção eles teriam entre si
+           
+20/04/2018 ; 3h ; especificar as funções ; com base nas espcificações dos módulos especifiquei como seria a função de embaralhamento
+
+28/04/2018 ; 1h30mim ; revisar especificações ; revisei se o que pensei sobre a função embaralhar estava de acordo com com as especificações dos módulos
+
+03/05/2018 ; 10h ; codificar módulo ; codifiquei o modulo embaralhar(arquivos embaralhar.c , embaralhar.h e testemb.c)
+
+05/05/2018 ; 3h ; revisar codifigo do módulo ; revisei os arquivos de embaralahar se estavam compativeis entre si 
+
+07/05/2018 ; 1h ; redigir script de teste  ; redigir o script de teste do módulo embaralhar de acordo com casos que pude imaginar
+
+07/05/2018 ; 1h ; revisar script de teste  ; revisei o script para ver se não tinha esquecido algum caso e se estava escrito corretamente o arquivo
+
+07/05/2018 ; 8h ; diagnosticar e corrigir os problemas encontrados  ; tentei minimazar o número de bugs e erros presentes no trabalho
+
+
+Pedro Castro Monteiro Dantas de Sousa  - 1413224

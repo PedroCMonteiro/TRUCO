@@ -1,0 +1,36 @@
+/*	 Requisitos funcionais:
+*
+* 1. Retirar cartas 9,8, 10 e coringas que compoem um baralho completo, cartas não utilizadas no truco.
+* 2. Embaralhar as cartas em ordem aleatória, que será feito a cada começo de mão.
+* 3. Escolher numero de jogadores 2,4 ou 6 jogadores para compor as 2 equipes (mostrar aos jogadores). 
+* 4. Cada inicio de mão é distribuido 3 cartas por jogador,onde a mão é composta de 3 rodadas.
+* 5. Ordem primordial de forças e naipes para determinação do vencedor da partida (mostrar aos jogadores).
+*--- Cartas: 3>2>A>K>J>Q>7>6>5>4
+*--- Naipes: Paus>Copas>Espadas>Ouro
+* 6. Ordem do jogo de  dos jogadores é no sentido antihorário.
+* 7. Primeiro a sacar é arbitrario (mostrar aos jogadores).
+* 8. Manilha de ordem de força, a carta seguinte a retirada para a mesa se torna a mais forte redefinindo
+* a sequencia (mostrar aos jogadores).
+* 9. A cada rodada o jogador pode acionar o truco na sua vez, para aumentar a pontuação da rodada
+*em 3 pontos, e os demais podem "fugir", fazendo a dupla desafiante ganhar 1 ponto, ou aceitar, ou ainda
+* aumentar o valor da aposta para que o valor da pontução em ordem crescente de 3 em 3 até atingir o
+* patamar de 12 (mostrar aos jogadores).
+* 10. Mão de Onze: Ocorre para o primeiro jogador que atingir 11 pontos, poderá ver a mão de sua equipe, e 
+*a rodada passa a valer 3 pontos, caso estes optem por não "arriscar", a outra equipe ganha 1 ponto (mostrar aos jogadores).
+* 11. Mão de ferro: Se aplica semelhantemente a mão de onze, porem quando os membros da equipe atingirem todos
+* o valor de 11 pontos e as cartas devem estar viradas (mostrar aos jogadores).
+* 12. Placar de pontuação é atualizado a cada fim de mão (mostrar aos jogadores).
+* 13. Tratamento dos casos de empate (mostrar aos jogadores):
+*	a) Se empatar na 1° rodada o ganhador da 2° rodada vence a mão.
+*	b) Se empatar na 2° rodada o ganhador da 1° rodada vence a mão.
+*	c) Se empatar na 1° e 2° rodadas o ganhador da 3° rodada vence a mão.
+*	d) Se empatar na 3° rodada o ganhador da 1° rodada vence a mão.
+*	e) Se empatar nas 3 rodadas ninguém vence a mão.
+*14. Vence o jogo, e assim ele é finalizado, pela equipe que atingir primeiro 12 pontos (mostrar aos jogadores).	
+*
+*	
+*	 Requisitos não funcionais:	
+*	
+* 1. Manutenabilidade.	
+* 2. Corretude.	
+* 3. Indepedencia dos módulo.

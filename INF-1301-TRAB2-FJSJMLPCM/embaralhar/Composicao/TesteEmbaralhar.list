@@ -1,0 +1,208 @@
+GERADOR DE SCRIPT DE DIRETIVAS PARA MAKE
+   LES / Informática / PUC-Rio    Versão 6.00 (c) 2005
+
+Composição do construto: TesteEmbaralhar.comp
+
+   Nome do Construto:           TesteEmbaralhar
+   Diretório base:              C:\Users\Pedro\Documents\INF1301-Trab2-JMLPCMFJS\embaralhar\Composicao
+
+   Arquivo composição:          TesteEmbaralhar.comp
+   Arquivo plataforma:          gmake.parm
+
+   Arquivo diretivas MAKE:      TesteEmbaralhar.make
+   Arquivo diretivas LINK:      TesteEmbaralhar.build
+   Arquivo listagem:            TesteEmbaralhar.list
+
+Módulos do construto: TesteEmbaralhar.comp
+
+   TESTEMB.c
+   EMBARALHAR.c
+   BARALHO.c
+   LISTA.c
+
+Estatísticas do construto
+
+   Estatísticas do arquivo: BARALHO.H
+      Total linhas:             391
+      Linhas de código:          45
+      Linhas de comentário:     288
+      Linhas em branco:          58
+   Arquivos de inclusão de que necessita
+      LISTA.H
+   Arquivos em que é incluído
+      BARALHO.c
+      EMBARALHAR.H
+      EMBARALHAR.c
+      TESTEMB.c
+
+   Estatísticas do arquivo: BARALHO.c
+      Total linhas:             302
+      Linhas de código:         193
+      Linhas de comentário:      80
+      Linhas em branco:          41
+   Arquivos de inclusão de que necessita
+      BARALHO.H
+      LISTA.H
+
+   Estatísticas do arquivo: EMBARALHAR.H
+      Total linhas:              93
+      Linhas de código:          19
+      Linhas de comentário:      57
+      Linhas em branco:          17
+   Arquivos de inclusão de que necessita
+      BARALHO.H
+      LISTA.H
+   Arquivos em que é incluído
+      EMBARALHAR.c
+      TESTEMB.c
+
+   Estatísticas do arquivo: EMBARALHAR.c
+      Total linhas:             133
+      Linhas de código:          67
+      Linhas de comentário:      34
+      Linhas em branco:          35
+   Arquivos de inclusão de que necessita
+      BARALHO.H
+      EMBARALHAR.H
+      GERAALT.H
+      LISTA.H
+
+   Estatísticas do arquivo: GERAALT.H
+      Total linhas:             169
+      Linhas de código:          15
+      Linhas de comentário:     138
+      Linhas em branco:          16
+   Arquivos em que é incluído
+      EMBARALHAR.c
+
+   Estatísticas do arquivo: Generico.h
+      Total linhas:             588
+      Linhas de código:          54
+      Linhas de comentário:     470
+      Linhas em branco:          64
+   Arquivos de inclusão de que necessita
+      TST_Espc.h
+   Arquivos em que é incluído
+      TESTEMB.c
+
+   Estatísticas do arquivo: GeraAlt.H
+      Total linhas:             169
+      Linhas de código:          15
+      Linhas de comentário:     138
+      Linhas em branco:          16
+   Arquivos em que é incluído
+      TESTEMB.c
+
+   Estatísticas do arquivo: LISTA.H
+      Total linhas:             346
+      Linhas de código:          35
+      Linhas de comentário:     262
+      Linhas em branco:          49
+   Arquivos em que é incluído
+      BARALHO.H
+      BARALHO.c
+      EMBARALHAR.H
+      EMBARALHAR.c
+      TESTEMB.c
+
+   Estatísticas do arquivo: LISTA.c
+      Total linhas:             560
+      Linhas de código:         288
+      Linhas de comentário:     136
+      Linhas em branco:         154
+   Arquivos de inclusão de que necessita
+      LISTA.h
+
+   Estatísticas do arquivo: LISTA.h
+      Total linhas:             346
+      Linhas de código:          35
+      Linhas de comentário:     262
+      Linhas em branco:          49
+   Arquivos em que é incluído
+      LISTA.c
+
+   Estatísticas do arquivo: LerParm.h
+      Total linhas:             463
+      Linhas de código:          36
+      Linhas de comentário:     362
+      Linhas em branco:          65
+   Arquivos em que é incluído
+      TESTEMB.c
+
+   Estatísticas do arquivo: TESTEMB.c
+      Total linhas:             245
+      Linhas de código:         127
+      Linhas de comentário:      58
+      Linhas em branco:          68
+   Arquivos de inclusão de que necessita
+      BARALHO.H
+      EMBARALHAR.H
+      Generico.h
+      GeraAlt.H
+      LISTA.H
+      LerParm.h
+      TST_ESPC.H
+      TST_Espc.h
+
+   Estatísticas do arquivo: TST_ESPC.H
+      Total linhas:             320
+      Linhas de código:          23
+      Linhas de comentário:     277
+      Linhas em branco:          20
+   Arquivos em que é incluído
+      TESTEMB.c
+
+   Estatísticas do arquivo: TST_Espc.h
+      Total linhas:             320
+      Linhas de código:          23
+      Linhas de comentário:     277
+      Linhas em branco:          20
+   Arquivos em que é incluído
+      Generico.h
+      TESTEMB.c
+
+Totais por tipo de arquivo
+
+  Tipo: h        Path: ..\Fontes
+         Total linhas do tipo:      1717
+         Linhas de código:           148
+         Linhas de comentário:      1371
+         Linhas em branco:           198
+         Arquivos deste tipo:          4
+
+  Tipo: obj      Path: ..\Objetos
+         Total linhas do tipo:         0
+         Linhas de código:             0
+         Linhas de comentário:         0
+         Linhas em branco:             0
+         Arquivos deste tipo:          0
+
+  Tipo: err      Path: ..\Produtos
+         Total linhas do tipo:         0
+         Linhas de código:             0
+         Linhas de comentário:         0
+         Linhas em branco:             0
+         Arquivos deste tipo:          0
+
+  Tipo: DEFAULT  Path: ..\Fontes
+         Total linhas do tipo:      1488
+         Linhas de código:           152
+         Linhas de comentário:      1160
+         Linhas em branco:           176
+         Arquivos deste tipo:          6
+
+  Tipo: c        Path: ..\Fontes
+         Total linhas do tipo:      1240
+         Linhas de código:           675
+         Linhas de comentário:       308
+         Linhas em branco:           298
+         Arquivos deste tipo:          4
+
+Totais para todo o construto TesteEmbaralhar
+
+   Total linhas:              4445
+   Linhas de código:           975
+   Linhas de comentário:      2839
+   Linhas em branco:           672
+   Arquivos processados:        14
+

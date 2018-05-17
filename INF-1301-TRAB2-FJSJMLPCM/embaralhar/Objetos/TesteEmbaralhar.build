@@ -1,0 +1,6 @@
+/OUT:..\Produtos\TRAB2-1.exe
+/INCREMENTAL:NO
+/MACHINE:IX86
+TESTEMB.obj  EMBARALHAR.obj  BARALHO.obj  LISTA.obj  
+ArcaboucoTeste.lib
+
