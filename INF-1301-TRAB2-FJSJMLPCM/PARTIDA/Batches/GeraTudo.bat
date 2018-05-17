@@ -6,6 +6,6 @@ cls
 pushd  .
 
 cd ..\Ferramentas
-gmake /b..\Composicao /cTesteLista
+gmake /b..\Composicao /cTestePartida
 
 popd
