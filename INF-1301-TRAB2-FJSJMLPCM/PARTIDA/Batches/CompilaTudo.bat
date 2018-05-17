@@ -10,7 +10,7 @@ del ..\Produtos\*.exe
 REM compila para producao sem otimizacoes
 pushd .
 cd ../Ferramentas
-nmake /F..\Composicao\TesteLista.make 
+nmake /F..\Composicao\TestePartida.make 
 popd
 
 copy ..\Produtos\*.err ..\Produtos\tudo.err
