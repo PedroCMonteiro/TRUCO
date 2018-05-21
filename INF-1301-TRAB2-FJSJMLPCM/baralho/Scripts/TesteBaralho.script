@@ -1,0 +1,52 @@
+// Script:    TesteEmbaralhar.script
+// Autor:     Pedro Castro Monteiro
+// Data:      06/mai/2018
+// Propósito: Testar o módulo embaralhar para um baralho com número genérico de cartas
+//
+
+== Inicializar valores
+=declararparm   baralho0  int 0
+=declararparm   baralho1  int 1
+=declararparm   baralho2  int 2
+=declararparm   baralho3  int 3
+
+=declararparm   OK                         int  0
+=declararparm   FaltouMemoriaBaralho       int  2
+
+
+=declararparm   pNULL          int  0
+=declararparm   pNaoNULL       int  1
+
+== Embaralhar um baralho com cartas
+=criabaralhocomcartas   baralho0
+=embaralhar              baralho0  OK
+=criabaralhocomcartas   baralho1
+=embaralhar              baralho1  OK
+=criabaralhocomcartas   baralho2
+=embaralhar              baralho2  OK
+=criabaralhocomcartas   baralho3
+=embaralhar              baralho3  OK
+
+== Embaralhar um baralho ja embaralhado
+=embaralhar              baralho0  OK
+=embaralhar              baralho1  OK
+=embaralhar              baralho2  OK
+=embaralhar              baralho3  OK
+
+== Reset do baralhos criados
+=resetteste
+
+== Embaralhar um baralho sem cartas
+=criabaralhosemcartas   baralho0
+=embaralhar              baralho0  OK
+=criabaralhosemcartas   baralho1
+=embaralhar              baralho1  OK
+=criabaralhosemcartas   baralho2
+=embaralhar              baralho2  OK
+=criabaralhosemcartas   baralho3
+=embaralhar              baralho3  OK
+
+== Reset de todos os baralhos
+=resetteste
+
+ // fim

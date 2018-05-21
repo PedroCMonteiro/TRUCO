@@ -1,0 +1,25 @@
+# Composicao do programa de teste de um embaralhamento de um baralho
+
+[Diretorios]
+
+Nome        =  TesteBaralho
+PathDefault =	..\Fontes
+err         =	..\Produtos
+obj			=	..\Objetos
+c			=	..\Fontes
+h			=	..\Fontes
+
+[Modulos]
+TESTEMB
+BARALHO
+LISTA
+
+[BuildInicio]
+/OUT:..\Produtos\TRAB2-1.exe
+/INCREMENTAL:NO
+/MACHINE:IX86
+
+[BuildFim]
+ArcaboucoTeste.lib
+
+[Fim]
