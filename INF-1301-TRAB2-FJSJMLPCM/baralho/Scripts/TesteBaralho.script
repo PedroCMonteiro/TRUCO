@@ -10,22 +10,25 @@
 =declararparm   baralho2  int 2
 =declararparm   baralho3  int 3
 
-=declararparm   OK                         int  0
-=declararparm   FaltouMemoriaBaralho       int  2
-
+=declararparm   OK                    int  0
+=declararparm   BaralhoVazio          int  1
+=declararparm   FimBaralho            int  2
+=declararparm   FaltouMemoriaBaralho  int  3
+=declararparm   FaltouMemoriaCarta    int  4
+=declararparm   NaoAchouCarta         int  5
 
 =declararparm   pNULL          int  0
 =declararparm   pNaoNULL       int  1
 
-== Embaralhar um baralho com cartas
-=criabaralhocomcartas   baralho0
-=embaralhar              baralho0  OK
-=criabaralhocomcartas   baralho1
-=embaralhar              baralho1  OK
-=criabaralhocomcartas   baralho2
-=embaralhar              baralho2  OK
-=criabaralhocomcartas   baralho3
-=embaralhar              baralho3  OK
+== Criar um baralho vazio
+=criabaralho   baralho0
+=obtercarta    baralho0  pNULL
+=criabaralho   baralho1
+=obtercarta    baralho1  pNULL
+=criabaralho   baralho2
+=obtercarta    baralho2  pNULL
+=criabaralho   baralho3
+=obtercarta    baralho3  pNULL
 
 == Embaralhar um baralho ja embaralhado
 =embaralhar              baralho0  OK
