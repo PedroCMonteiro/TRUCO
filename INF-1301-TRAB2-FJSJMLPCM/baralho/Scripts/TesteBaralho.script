@@ -1,7 +1,7 @@
 // Script:    TesteEmbaralhar.script
 // Autor:     Pedro Castro Monteiro
 // Data:      06/mai/2018
-// Propósito: Testar o módulo embaralhar para um baralho com número genérico de cartas
+// Propósito: Testar o módulo baralho
 //
 
 == Inicializar valores
@@ -35,9 +35,6 @@
 =embaralhar              baralho1  OK
 =embaralhar              baralho2  OK
 =embaralhar              baralho3  OK
-
-== Reset do baralhos criados
-=resetteste
 
 == Embaralhar um baralho sem cartas
 =criabaralhosemcartas   baralho0
