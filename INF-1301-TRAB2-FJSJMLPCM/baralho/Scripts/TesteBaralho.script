@@ -10,6 +10,61 @@
 =declararparm   baralho2  int 2
 =declararparm   baralho3  int 3
 
+=declaraparm    carta11
+=declaraparm    carta12
+=declaraparm    carta13
+=declaraparm    carta14
+=declaraparm    carta15
+=declaraparm    carta16
+=declaraparm    carta17
+=declaraparm    carta18
+=declaraparm    carta19
+=declaraparm    carta110
+=declaraparm    carta111
+=declaraparm    carta112
+=declaraparm    carta113
+=declaraparm    carta21
+=declaraparm    carta22
+=declaraparm    carta23
+=declaraparm    carta24
+=declaraparm    carta25
+=declaraparm    carta26
+=declaraparm    carta27
+=declaraparm    carta28
+=declaraparm    carta29
+=declaraparm    carta210
+=declaraparm    carta211
+=declaraparm    carta212
+=declaraparm    carta213
+=declaraparm    carta31
+=declaraparm    carta32
+=declaraparm    carta33
+=declaraparm    carta34
+=declaraparm    carta35
+=declaraparm    carta36
+=declaraparm    carta37
+=declaraparm    carta38
+=declaraparm    carta39
+=declaraparm    carta310
+=declaraparm    carta311
+=declaraparm    carta312
+=declaraparm    carta313
+=declaraparm    carta41
+=declaraparm    carta42
+=declaraparm    carta43
+=declaraparm    carta44
+=declaraparm    carta45
+=declaraparm    carta46
+=declaraparm    carta47
+=declaraparm    carta48
+=declaraparm    carta49
+=declaraparm    carta410
+=declaraparm    carta411
+=declaraparm    carta412
+=declaraparm    carta413
+=declaraparm    coringa1
+=declaraparm    coringa2
+
 =declararparm   OK                    int  0
 =declararparm   BaralhoVazio          int  1
 =declararparm   FimBaralho            int  2
@@ -17,24 +72,84 @@
 =declararparm   FaltouMemoriaCarta    int  4
 =declararparm   NaoAchouCarta         int  5
 
+=declaraparm    Espadas int 0
+=declaraparm    Paus    int 1
+=declaraparm    Copas   int 2
+=declaraparm    Ouros   int 3
+=declaraparm    Coringa int 4
+
 =declararparm   pNULL          int  0
 =declararparm   pNaoNULL       int  1
 
 == Criar um baralho vazio
 =criabaralho   baralho0
-=obtercarta    baralho0  pNULL
+=avancarcarta  baralho0  1  BaralhoVazio
 =criabaralho   baralho1
-=obtercarta    baralho1  pNULL
+=avancarcarta  baralho1  1  BaralhoVazio
 =criabaralho   baralho2
-=obtercarta    baralho2  pNULL
+=avancarcarta  baralho2  1  BaralhoVazio
 =criabaralho   baralho3
-=obtercarta    baralho3  pNULL
+=avancarcarta  baralho3  1  BaralhoVazio
 
-== Embaralhar um baralho ja embaralhado
-=embaralhar              baralho0  OK
-=embaralhar              baralho1  OK
-=embaralhar              baralho2  OK
-=embaralhar              baralho3  OK
+== Criar cartas
+=criarcarta   carta11  Espadas 1
+=criarcarta   carta12  Espadas 2
+=criarcarta   carta13  Espadas 3
+=criarcarta   carta14  Espadas 4
+=criarcarta   carta15  Espadas 5
+=criarcarta   carta16  Espadas 6
+=criarcarta   carta17  Espadas 7
+=criarcarta   carta18  Espadas 8
+=criarcarta   carta19  Espadas 9
+=criarcarta   carta110 Espadas 10
+=criarcarta   carta111 Espadas 11
+=criarcarta   carta112 Espadas 12
+=criarcarta   carta113 Espadas 13
+
+=criarcarta   carta21  Paus    1
+=criarcarta   carta22  Paus    2
+=criarcarta   carta23  Paus    3
+=criarcarta   carta24  Paus    4
+=criarcarta   carta25  Paus    5
+=criarcarta   carta26  Paus    6
+=criarcarta   carta27  Paus    7
+=criarcarta   carta28  Paus    8
+=criarcarta   carta29  Paus    9
+=criarcarta   carta210 Paus    10
+=criarcarta   carta211 Paus    11
+=criarcarta   carta212 Paus    12
+=criarcarta   carta213 Paus    13
+
+=criarcarta   carta31  Copas   1
+=criarcarta   carta32  Copas   2
+=criarcarta   carta33  Copas   3
+=criarcarta   carta34  Copas   4
+=criarcarta   carta35  Copas   5
+=criarcarta   carta36  Copas   6
+=criarcarta   carta37  Copas   7
+=criarcarta   carta38  Copas   8
+=criarcarta   carta39  Copas   9
+=criarcarta   carta310 Copas   10
+=criarcarta   carta311 Copas   11
+=criarcarta   carta312 Copas   12
+=criarcarta   carta313 Copas   13
+
+=criarcarta   carta41  Ouros   1
+=criarcarta   carta42  Ouros   2
+=criarcarta   carta43  Ouros   3
+=criarcarta   carta44  Ouros   4
+=criarcarta   carta45  Ouros   5
+=criarcarta   carta46  Ouros   6
+=criarcarta   carta47  Ouros   7
+=criarcarta   carta48  Ouros   8
+=criarcarta   carta49  Ouros   9
+=criarcarta   carta410 Ouros   10
+=criarcarta   carta411 Ouros   11
+=criarcarta   carta412 Ouros   12
+=criarcarta   carta413 Ouros   13
+
+=criarcarta   coringa1 Coringa 1
+=criarcarta   coringa2 Coringa 2
 
 == Embaralhar um baralho sem cartas
 =criabaralhosemcartas   baralho0
