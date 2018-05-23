@@ -1,16 +1,16 @@
 /***************************************************************************
-*  $MCI Módulo de implementação: BAR  Baralho
+*  $MCI MÃ³dulo de implementaÃ§Ã£o: BAR  Baralho
 *
 *  Arquivo gerado:              BARALHO.c
 *  Letras identificadoras:      BAR
 *
-*  Projeto: INF 1301 / 1628 Implementação do jogo de Truco Paulista em C
+*  Projeto: INF 1301 / 1628 ImplementaÃ§Ã£o do jogo de Truco Paulista em C
 *  Gestor:  LES/DI/PUC-Rio
 *  Autores: JML Julia Maria Lima
 *
-*  $HA Histórico de evolução:
-*     Versão  Autor    Data     Observações
-*     1       jml   05/mai/2018 início desenvolvimento
+*  $HA HistÃ³rico de evoluÃ§Ã£o:
+*     VersÃ£o  Autor    Data     ObservaÃ§Ãµes
+*     1       jml   05/mai/2018 inÃ­cio desenvolvimento
 *
 *
 ***************************************************************************/
@@ -32,50 +32,45 @@
 static const BAR_tpNaipe NAIPE[ NUM_NAIPE ] = { Espadas , Paus , Copas , 
 												Ouros , Coringa } ;
 
-/***** Protótipos das funções encapuladas no módulo *****/
+/***** ProtÃ³tipos das funÃ§Ãµes encapuladas no mÃ³dulo *****/
 
    static void LimparBaralho( BAR_tppBaralho pBaralho ) ;
 
-   static tpElemLista * CriarElemento( LIS_tppLista pLista ,
-                                       void *       pValor  ) ;
-
-   static void LimparCabeca( LIS_tppLista pLista ) ;
-
-/*****  Código das funções exportadas pelo módulo  *****/												
+/*****  CÃ³digo das funÃ§Ãµes exportadas pelo mÃ³dulo  *****/												
 
 /***************************************************************************
 *
-*  Função: BAR  &Ir para o inicio do baralho
+*  FunÃ§Ã£o: BAR  &Ir para o inicio do baralho
 *  ****/
 
 void BAR_IrInicioBaralho( BAR_tppBaralho pBaralho )
 {
 	IrInicioLista( pBaralho ) ;
-} /* Fim função: BAR  &Ir para o inicio do baralho */
+} /* Fim funÃ§Ã£o: BAR  &Ir para o inicio do baralho */
 
   /***************************************************************************
   *
-  *  Função: BAR  &Ir para o final do baralho
+  *  FunÃ§Ã£o: BAR  &Ir para o final do baralho
   *  ****/
 
 void BAR_IrFinalBaralho( BAR_tppBaralho pBaralho )
 {
 	IrFinalLista( pBaralho ) ;
-} /* Fim função: BAR  &Ir para o final do baralho */
+} /* Fim funÃ§Ã£o: BAR  &Ir para o final do baralho */
 
   /***************************************************************************
   *
-  *  Função: BAR  &Liberar carta
+  *  FunÃ§Ã£o: BAR  &Liberar carta
   *  ****/
 
 void LiberarCarta( BAR_tppCarta pCarta )
 {
 //	free(pCarta);
-}/* Fim função: BAR  &Liberar carta */
+}/* Fim funÃ§Ã£o: BAR  &Liberar carta */
 
  /***************************************************************************
  *
- *  Função: BAR  &Avançar a carta
+ *  FunÃ§Ã£o: BAR  &AvanÃ§ar a carta
  *  ****/
 
 BAR_tpCondRet BAR_AvancarCarta( BAR_tppBaralho pBaralho , int numCarta )
@@ -101,11 +96,11 @@ BAR_tpCondRet BAR_AvancarCarta( BAR_tppBaralho pBaralho , int numCarta )
 	}
 
 	return BAR_CondRetOK ;
-}/* Fim função: BAR  &Avançar a carta */
+}/* Fim funÃ§Ã£o: BAR  &AvanÃ§ar a carta */
 
  /***************************************************************************
  *
- *  Função: BAR  &Criar baralho
+ *  FunÃ§Ã£o: BAR  &Criar baralho
  *  ****/
 
 BAR_tppBaralho BAR_CriarBaralho( )
@@ -121,22 +116,22 @@ BAR_tppBaralho BAR_CriarBaralho( )
 
 	return pBaralho ;
 
-}/* Fim função: BAR  &Criar baralho */
+}/* Fim funÃ§Ã£o: BAR  &Criar baralho */
 
 
 /***************************************************************************
 *
-*  Função: BAR  &Obter carta
+*  FunÃ§Ã£o: BAR  &Obter carta
 *  ****/
 
 BAR_tppCarta BAR_ObterCarta( BAR_tppBaralho pBaralho )
 {
 	return LIS_ObterValor( pBaralho ) ;
-}/* Fim função: BAR  &Obter carta */
+}/* Fim funÃ§Ã£o: BAR  &Obter carta */
 
  /***************************************************************************
  *
- *  Função: BAR  &Criar carta
+ *  FunÃ§Ã£o: BAR  &Criar carta
  *  ****/
 
 BAR_tppCarta BAR_CriarCarta( int numero , BAR_tpNaipe naipe )
@@ -154,11 +149,11 @@ BAR_tppCarta BAR_CriarCarta( int numero , BAR_tpNaipe naipe )
 	carta->numero = numero ;
 
 	return carta ;
-}/* Fim função: BAR  &Criar carta */
+}/* Fim funÃ§Ã£o: BAR  &Criar carta */
 
  /***************************************************************************
  *
- *  Função: BAR  &Inserir carta antes
+ *  FunÃ§Ã£o: BAR  &Inserir carta antes
  *  ****/
 
 BAR_tpCondRet BAR_InserirCartaAntes( BAR_tppBaralho pBaralho , BAR_tppCarta pCarta )
@@ -173,11 +168,11 @@ BAR_tpCondRet BAR_InserirCartaAntes( BAR_tppBaralho pBaralho , BAR_tppCarta pCar
 	}
 
 	return BAR_CondRetOK ;
-}/* Fim função: BAR  &Inserir carta antes */
+}/* Fim funÃ§Ã£o: BAR  &Inserir carta antes */
 
  /***************************************************************************
  *
- *  Função: BAR  &Inserir carta apos
+ *  FunÃ§Ã£o: BAR  &Inserir carta apos
  *  ****/
 
 BAR_tpCondRet BAR_InserirCartaApos( BAR_tppBaralho pBaralho , BAR_tppCarta pCarta )
@@ -192,11 +187,11 @@ BAR_tpCondRet BAR_InserirCartaApos( BAR_tppBaralho pBaralho , BAR_tppCarta pCart
 	}
 
 	return BAR_CondRetOK ;
-}/* Fim função: BAR  &Inserir carta apos */
+}/* Fim funÃ§Ã£o: BAR  &Inserir carta apos */
 
  /***************************************************************************
  *
- *  Função: BAR  &Remove carta corrente
+ *  FunÃ§Ã£o: BAR  &Remove carta corrente
  *  ****/
 
 BAR_tpCondRet BAR_RemoverCartaCorrente( BAR_tppBaralho pBaralho )
@@ -211,11 +206,11 @@ BAR_tpCondRet BAR_RemoverCartaCorrente( BAR_tppBaralho pBaralho )
 	}
 
 	return BAR_CondRetOK ;
-}/* Fim função: BAR  &Remover carta corrente */
+}/* Fim funÃ§Ã£o: BAR  &Remover carta corrente */
 
  /***************************************************************************
  *
- *  Função: BAR  &Remove cartas
+ *  FunÃ§Ã£o: BAR  &Remove cartas
  *  ****/
 
 BAR_tpCondRet BAR_RemoverCartaEspecificada( BAR_tppBaralho pBaralho , 
@@ -276,11 +271,11 @@ BAR_tpCondRet BAR_RemoverCartaEspecificada( BAR_tppBaralho pBaralho ,
 	BAR_IrInicioBaralho( pBaralho ) ;
 
 	return BAR_CondRetNaoAchouCarta ;
-}/* Fim função: BAR  &Remover carta  especificada*/
+}/* Fim funÃ§Ã£o: BAR  &Remover carta  especificada*/
 
  /***************************************************************************
  *
- *  Função: BAR  &Criar baralho completo
+ *  FunÃ§Ã£o: BAR  &Criar baralho completo
  *  ****/
 
 BAR_tpCondRet BAR_CriarBaralhoCompleto( BAR_tppBaralho pBaralho )
@@ -316,7 +311,7 @@ BAR_tpCondRet BAR_CriarBaralhoCompleto( BAR_tppBaralho pBaralho )
 		}
 	}
 
-	/* Inserção dos coringas */
+	/* InserÃ§Ã£o dos coringas */
 	pCarta = BAR_CriaCarta( 1 , NAIPE[ naipe ] ) ;
 
 	if ( pCarta == NULL )
@@ -348,11 +343,11 @@ BAR_tpCondRet BAR_CriarBaralhoCompleto( BAR_tppBaralho pBaralho )
 	BAR_IrInicioBaralho( pBaralho ) ;
 
 	return BAR_CondRetOK ;
-}/* Fim função: BAR  &Criar baralho completo */
+}/* Fim funÃ§Ã£o: BAR  &Criar baralho completo */
 
  /***************************************************************************
  *
- *  Função: BAR  &Criar baralho truco
+ *  FunÃ§Ã£o: BAR  &Criar baralho truco
  *  ****/
 
 BAR_tpCondRet BAR_CriarBaralhoTruco( BAR_tppBaralho pBaralho )
@@ -424,15 +419,15 @@ BAR_tpCondRet BAR_CriarBaralhoTruco( BAR_tppBaralho pBaralho )
 	BAR_IrInicioBaralho( pBaralho ) ;
 
 	return BAR_CondRetOK ;
-}/* Fim função: BAR  &Criar baralho truco */
+}/* Fim funÃ§Ã£o: BAR  &Criar baralho truco */
 
 
-/*****  Código das funções encapsuladas no módulo  *****/	
+/*****  CÃ³digo das funÃ§Ãµes encapsuladas no mÃ³dulo  *****/	
 
 
  /***************************************************************************
  *
- *  Função: BAR  &Limpar baralho
+ *  FunÃ§Ã£o: BAR  &Limpar baralho
  *  ****/
 
 void LimparBaralho( BAR_tppBaralho pBaralho )
@@ -450,6 +445,6 @@ void LimparBaralho( BAR_tppBaralho pBaralho )
 		CondRet = BAR_RemoverCartaCorrente( pBaralho ) ;
 	}
 
-}/* Fim função: BAR  &Limpar baralho */
+}/* Fim funÃ§Ã£o: BAR  &Limpar baralho */
 
- /********** Fim do módulo de implementação: BAR Baralho **********/
+ /********** Fim do mÃ³dulo de implementaÃ§Ã£o: BAR Baralho **********/
