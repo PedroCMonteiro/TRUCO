@@ -86,16 +86,10 @@
 =avancarcarta  baralho0  1  BaralhoVazio
 =criabaralho   baralho1
 =avancarcarta  baralho1  1  BaralhoVazio
-=criabaralho   baralho2
-=avancarcarta  baralho2  1  BaralhoVazio
-=criabaralho   baralho3
-=avancarcarta  baralho3  1  BaralhoVazio
 
 ==Remover carta corrente de um baralho vazio
 =removercartacorrente  baralho0 BaralhoVazio
 =removercartacorrente  baralho1 BaralhoVazio
-=removercartacorrente  baralho2 BaralhoVazio
-=removercartacorrente  baralho3 BaralhoVazio
 
 == Criar cartas
 =criarcarta   carta11   Espadas 1   pNaoNULL
@@ -157,29 +151,43 @@
 =criarcarta   coringa1  Coringa 1   pNaoNULL
 =criarcarta   coringa2  Coringa 2   pNaoNULL
 
-== Inserir cartas antes
-=inserircartaantes   baralho0  carta11
-=obtercarta          baralho0  carta11
-=inserircartaantes   baralho0  carta12
-=obtercarta          baralho0  carta12
+== Verificar ObterVarta relativo ao baralho vazio
+=obtercarta    baralho0   carta11   pNULL
+=obtercarta    baralho1   carta11   pNULL
+
+== Inserir cartas antes em um baralho vazio
+=inserircartaantes   baralho0  carta12  OK
+=obtercarta          baralho0  carta12  pNaoNULL
+
+== Inserir cartas apos em um baralho vazio
+=inserircartaapos    baralho1  carta11  OK
+=obtercarta          baralho1  carta11  pNaoNULL
+
+== Inserir carta antes da primeira
+=inserircartaantes   baralho0  carta11  OK
+=obtercarta          baralho0  carta11  pNaoNULL
+
+== Inserir cartas apos da primeira
+=inserircartaantes   baralho1  carta11  OK
+=obtercarta          baralho1  carta11  pNaoNULL
+
+=inserircartaapos    baralho2  carta12  OK
+=obtercarta          baralho2  carta12  pNaoNULL
+=inserircartaapos    baralho3  carta12  OK
+=obtercarta          baralho3  carta12  pNaoNULL
+
 =inserircartaantes   baralho0  carta13
 =obtercarta          baralho0  carta13
 =inserircartaantes   baralho0  carta14
 =obtercarta          baralho0  carta14
 =inserircartaantes   baralho0  carta15
 =obtercarta          baralho0  carta15
-=inserircartaantes   baralho1  carta11
-=obtercarta          baralho1  carta11
-=inserircartaantes   baralho1 carta12
-=obtercarta          baralho1 carta12
 =inserircartaantes   baralho1  carta13
 =obtercarta          baralho1  carta13
 =inserircartaantes   baralho1  carta14
 =obtercarta          baralho1  carta14
 =inserircartaantes   baralho1  carta15
 =obtercarta          baralho1  carta15
-=inserircartaantes   baralho2  carta11
-=obtercarta          baralho2  carta11
 =inserircartaantes   baralho2  carta12
 =obtercarta          baralho2  carta12
 =inserircartaantes   baralho2  carta13
@@ -188,8 +196,6 @@
 =obtercarta          baralho2  carta14
 =inserircartaantes   baralho2  carta15
 =obtercarta          baralho2  carta15
-=inserircartaantes   baralho3  carta11
-=obtercarta          baralho3  carta11
 =inserircartaantes   baralho3  carta12
 =obtercarta          baralho3  carta12
 =inserircartaantes   baralho3  carta13
@@ -198,6 +204,12 @@
 =obtercarta          baralho3  carta14
 =inserircartaantes   baralho3  carta15
 =obtercarta          baralho3  carta15
+
+== Avancar carta no final do baralho
+=avancarcarta  baralho0  1  Fimbaralho
+=avancarcarta  baralho1  1  Fimbaralho
+=avancarcarta  baralho2  1  Fimbaralho
+=avancarcarta  baralho3  1  Fimbaralho
 
 == Reset de todos os baralhos
 =resetteste
