@@ -1,4 +1,4 @@
-// Script:    TesteEmbaralhar.script
+// Script:    TesteBaralho.script
 // Autor:     Pedro Castro Monteiro
 // Data:      06/mai/2018
 // Propósito: Testar o módulo baralho
@@ -72,24 +72,20 @@
 =declararparm   FaltouMemoriaCarta    int  4
 =declararparm   NaoAchouCarta         int  5
 
-=declaraparm    Espadas int 0
-=declaraparm    Paus    int 1
-=declaraparm    Copas   int 2
-=declaraparm    Ouros   int 3
-=declaraparm    Coringa int 4
+=declaraparm    Espadas   int 0
+=declaraparm    Paus      int 1
+=declaraparm    Copas     int 2
+=declaraparm    Ouros     int 3
+=declaraparm    Coringa   int 4
 
-=declararparm   pNULL          int  0
-=declararparm   pNaoNULL       int  1
+=declararparm   pNULL     int  0
+=declararparm   pNaoNULL  int  1
 
 == Criar um baralho vazio
 =criabaralho   baralho0
 =avancarcarta  baralho0  1  BaralhoVazio
 =criabaralho   baralho1
 =avancarcarta  baralho1  1  BaralhoVazio
-
-==Remover carta corrente de um baralho vazio
-=removercartacorrente  baralho0 BaralhoVazio
-=removercartacorrente  baralho1 BaralhoVazio
 
 == Criar cartas
 =criarcarta   carta11   Espadas 1   pNaoNULL
@@ -151,30 +147,34 @@
 =criarcarta   coringa1  Coringa 1   pNaoNULL
 =criarcarta   coringa2  Coringa 2   pNaoNULL
 
-== Verificar ObterVarta relativo ao baralho vazio
-=obtercarta    baralho0   carta11   pNULL
-=obtercarta    baralho1   carta11   pNULL
+== Remover carta corrente de um baralho vazio
+=removercartacorrente  baralho0 BaralhoVazio
+=removercartacorrente  baralho1 BaralhoVazio
 
-== Inserir cartas antes em um baralho vazio
+== Verificar ObterCarta relativo ao baralho vazio
+=obtercarta    baralho0  pNULL
+=obtercarta    baralho1  pNULL
+
+== Inserir carta antes em um baralho vazio
 =inserircartaantes   baralho0  carta12  OK
-=obtercarta          baralho0  carta12  pNaoNULL
+=obtercarta          baralho0  carta12  carta12
 
-== Inserir cartas apos em um baralho vazio
+== Inserir carta apos em um baralho vazio
 =inserircartaapos    baralho1  carta11  OK
-=obtercarta          baralho1  carta11  pNaoNULL
+=obtercarta          baralho1  carta11  carta11
 
 == Inserir carta antes da primeira
 =inserircartaantes   baralho0  carta11  OK
-=obtercarta          baralho0  carta11  pNaoNULL
+=obtercarta          baralho0  carta11  carta11
 
-== Inserir cartas apos da primeira
+== Inserir carta apos da primeira
 =inserircartaantes   baralho1  carta11  OK
-=obtercarta          baralho1  carta11  pNaoNULL
+=obtercarta          baralho1  carta11  carta11
 
 =inserircartaapos    baralho2  carta12  OK
-=obtercarta          baralho2  carta12  pNaoNULL
+=obtercarta          baralho2  carta12  carta12
 =inserircartaapos    baralho3  carta12  OK
-=obtercarta          baralho3  carta12  pNaoNULL
+=obtercarta          baralho3  carta12  carta12
 
 =inserircartaantes   baralho0  carta13
 =obtercarta          baralho0  carta13
