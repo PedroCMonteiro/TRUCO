@@ -115,7 +115,8 @@ static const BAR_tpNaipe NAIPE[ NUM_NAIPE ] = { Espadas , Copas , Paus , Ouros ,
 
             vtBaralhos[ inxBaralho ] = BAR_CriaBaralho( ) ;
 
-            return TST_CondRetOK ;
+            return TST_CompararPonteiroNulo( 1 , vtBaralhos[ inxBaralho ] ,
+               "Erro em ponteiro de novo baralho."  ) ;
 
         } /* fim ativa: Efetuar criação de baralho sem cartas */ 
 
