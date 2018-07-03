@@ -1,4 +1,4 @@
-/*Modulo de implementação da partida*/
+/*Modulo de implementaÃ§Ã£o da partida*/
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
@@ -18,14 +18,14 @@ static const int PTD_MAOONZE = 111;
 
 /***************************************************************************
 *
-*					Funções para manipulação dos jogadores
+*					FunÃ§Ãµes para manipulaÃ§Ã£o dos jogadores
 *
 ***************************************************************************/
 
 
 /***************************************************************************
 *
-*  Função: PTD  &Criar Dados Jogador
+*  FunÃ§Ã£o: PTD  &Criar Dados Jogador
 *  ****/
 
 PTD_tppDadosJogador PTD_CriaDadosJogador(char *nome, int Equipe, int ident)
@@ -46,17 +46,17 @@ PTD_tppDadosJogador PTD_CriaDadosJogador(char *nome, int Equipe, int ident)
 		return NULL;
 	}
 
-	strcpy(Dados->Nome,nome);
+	strcpy(Dados->Nome, nome);
 	Dados->Equipe = Equipe;
-	Dados->Id     = ident;
+	Dados->Id = ident;
 	Dados->Pontos = 0;
 
 	return Dados;
-}/*Fim função: PTD &Criar Dados Jogador*/
+}/*Fim funÃ§Ã£o: PTD &Criar Dados Jogador*/
 
  /***************************************************************************
  *
- *  Função: PTD  &Remover Dado Jogador Corrente
+ *  FunÃ§Ã£o: PTD  &Remover Dado Jogador Corrente
  *  ****/
 
 PTD_tpCondRet PTD_RemoverDadoJogadorCorrente(PTD_tppJogadores pjogadores)
@@ -75,42 +75,42 @@ PTD_tpCondRet PTD_RemoverDadoJogadorCorrente(PTD_tppJogadores pjogadores)
 
 /***************************************************************************
 *
-*  Função: PTD  &Excluir Dados Jogador
+*  FunÃ§Ã£o: PTD  &Excluir Dados Jogador
 *  ****/
 
-void PTD_ExcluirDadosJogador(PTD_tppDadosJogador pDados) 
+void PTD_ExcluirDadosJogador(PTD_tppDadosJogador pDados)
 {
 	BAR_DestruirBaralho(pDados->Mao);
 
 	free(pDados);
-}/*Fim função: PTD &Excluir Dados Jogador*/
+}/*Fim funÃ§Ã£o: PTD &Excluir Dados Jogador*/
 
  /***************************************************************************
  *
- *  Função: PTD  &Ir Primeiro Jogador
+ *  FunÃ§Ã£o: PTD  &Ir Primeiro Jogador
  *  ****/
 
 void PTD_IrPrimeiroJogador(PTD_tppJogadores pJogadores)
-{ 
+{
 	IrInicioLista(pJogadores);
-}/*Fim função: PTD &Ir Primeiro Jogador*/
+}/*Fim funÃ§Ã£o: PTD &Ir Primeiro Jogador*/
 
  /***************************************************************************
  *
- *  Função: PTD  &Ir Ultimo Jogador
+ *  FunÃ§Ã£o: PTD  &Ir Ultimo Jogador
  *  ****/
 
-void PTD_IrUltimoJogador(PTD_tppJogadores pJogadores) 
+void PTD_IrUltimoJogador(PTD_tppJogadores pJogadores)
 {
 	IrFinalLista(pJogadores);
-}/*Fim função: PTD &Ir Ultimo Jogador*/
+}/*Fim funÃ§Ã£o: PTD &Ir Ultimo Jogador*/
 
  /***************************************************************************
  *
- *  Função: PTD  &Criar Jogadores Lista
+ *  FunÃ§Ã£o: PTD  &Criar Jogadores Lista
  *  ****/
 
-PTD_tppJogadores PTD_CriarJogadoresLista(void) 
+PTD_tppJogadores PTD_CriarJogadoresLista(void)
 {
 	PTD_tppJogadores pJogadores;
 
@@ -122,21 +122,21 @@ PTD_tppJogadores PTD_CriarJogadoresLista(void)
 	}
 
 	return pJogadores;
-}/*Fim função: PTD &Criar Jogadores Lista*/
+}/*Fim funÃ§Ã£o: PTD &Criar Jogadores Lista*/
 
  /***************************************************************************
  *
- *  Função: PTD  &Obter Dados Jogador
+ *  FunÃ§Ã£o: PTD  &Obter Dados Jogador
  *  ****/
 
-PTD_tppDadosJogador PTD_ObterDadosJogador(PTD_tppJogadores pJogadores) 
+PTD_tppDadosJogador PTD_ObterDadosJogador(PTD_tppJogadores pJogadores)
 {
 	return (PTD_tppDadosJogador)LIS_ObterValor(pJogadores);
-}/*Fim função: PTD &Obter Dados Jogador */
+}/*Fim funÃ§Ã£o: PTD &Obter Dados Jogador */
 
  /***************************************************************************
  *
- *  Função: PTD  &Inserir Jogador
+ *  FunÃ§Ã£o: PTD  &Inserir Jogador
  *  ****/
 
 PTD_tpCondRet PTD_InserirJogador(PTD_tppDadosJogador pDados, PTD_tppJogadores pJogadores)
@@ -144,18 +144,18 @@ PTD_tpCondRet PTD_InserirJogador(PTD_tppDadosJogador pDados, PTD_tppJogadores pJ
 	LIS_tpCondRet CondRet;
 
 	CondRet = LIS_InserirElementoAntes(pJogadores, pDados);
-	
-	if (CondRet == LIS_CondRetFaltouMemoria) 
+
+	if (CondRet == LIS_CondRetFaltouMemoria)
 	{
 		return PTD_CondRetFaltouMemoriaDadosJogador;
 	}
 
 	return PTD_CondRetOK;
-}/*Fim função: PTD &Obter Dados Jogador */
+}/*Fim funÃ§Ã£o: PTD &Obter Dados Jogador */
 
  /***************************************************************************
  *
- *  Função: PTD  &Avancar Jogador
+ *  FunÃ§Ã£o: PTD  &Avancar Jogador
  *  ****/
 
 PTD_tpCondRet PTD_AvancarJogador(PTD_tppJogadores pJogadores, int numAvanco)
@@ -179,14 +179,14 @@ PTD_tpCondRet PTD_AvancarJogador(PTD_tppJogadores pJogadores, int numAvanco)
 		}
 	}
 	return PTD_CondRetOK;
-}/* Fim função: PTD  &Avançar Jogador */
+}/* Fim funÃ§Ã£o: PTD  &AvanÃ§ar Jogador */
 
  /***************************************************************************
  *
- *  Função: PTD  &Procurar Jogador
+ *  FunÃ§Ã£o: PTD  &Procurar Jogador
  *  ****/
 
-PTD_tpCondRet PTD_ProcurarJogador(PTD_tppJogadores pJogadores, PTD_tppDadosJogador pDados) 
+PTD_tpCondRet PTD_ProcurarJogador(PTD_tppJogadores pJogadores, PTD_tppDadosJogador pDados)
 {
 	LIS_tpCondRet CondRet;
 
@@ -201,25 +201,25 @@ PTD_tpCondRet PTD_ProcurarJogador(PTD_tppJogadores pJogadores, PTD_tppDadosJogad
 	}
 	else
 	{
-		if (CondRet == LIS_CondRetListaVazia) 
+		if (CondRet == LIS_CondRetListaVazia)
 		{
 			return PTD_CondRetSemJogadores;
 		}
 	}
 	return PTD_CondRetOK;
-}/* Fim função: PTD  &Procurar Jogador */
+}/* Fim funÃ§Ã£o: PTD  &Procurar Jogador */
 
  /***************************************************************************
  *
- *  Função: PTD  &Atualiza Dados
+ *  FunÃ§Ã£o: PTD  &Atualiza Dados
  *  ****/
-PTD_tpCondRet PTD_AtualizaDados(PTD_tppJogadores pJogadores, PTD_tppDadosJogador pDadosVelhos, PTD_tppDadosJogador pDadosNovos) 
+PTD_tpCondRet PTD_AtualizaDados(PTD_tppJogadores pJogadores, PTD_tppDadosJogador pDadosVelhos, PTD_tppDadosJogador pDadosNovos)
 {
 	PTD_tpCondRet PtdCondRet;
 
 	PtdCondRet = PTD_ProcurarJogador(pJogadores, pDadosVelhos);
 
-	if (PtdCondRet != PTD_CondRetOK) 
+	if (PtdCondRet != PTD_CondRetOK)
 	{
 		return PtdCondRet;
 	}
@@ -247,14 +247,14 @@ PTD_tpCondRet PTD_AtualizaDados(PTD_tppJogadores pJogadores, PTD_tppDadosJogador
 
 	return PtdCondRet;
 
-}/* Fim função: PTD  &Atualiza Dados */
+}/* Fim funÃ§Ã£o: PTD  &Atualiza Dados */
 
  /***************************************************************************
  *
- *  Função: PTD  &Gerar Maos
+ *  FunÃ§Ã£o: PTD  &Gerar Maos
  *  ****/
 
-PTD_tpCondRet PTD_GeraMaos(BAR_tppBaralho pBaralho, PTD_tppJogadores pJogadores) 
+PTD_tpCondRet PTD_GeraMaos(BAR_tppBaralho pBaralho, PTD_tppJogadores pJogadores)
 {
 
 #ifdef _DEBUG
@@ -270,8 +270,8 @@ PTD_tpCondRet PTD_GeraMaos(BAR_tppBaralho pBaralho, PTD_tppJogadores pJogadores)
 
 	int j = -1;
 
-	pCarta       = (BAR_tppCarta)malloc(sizeof(BAR_tpCarta));
-	pDados       = (PTD_tppDadosJogador)malloc(sizeof(PTD_tpDadosJogador));
+	pCarta = (BAR_tppCarta)malloc(sizeof(BAR_tpCarta));
+	pDados = (PTD_tppDadosJogador)malloc(sizeof(PTD_tpDadosJogador));
 	pDadosVelhos = (PTD_tppDadosJogador)malloc(sizeof(PTD_tpDadosJogador));
 
 	if (pDados == NULL || pDadosVelhos == NULL)
@@ -297,7 +297,7 @@ PTD_tpCondRet PTD_GeraMaos(BAR_tppBaralho pBaralho, PTD_tppJogadores pJogadores)
 
 		pDados = pDadosVelhos;
 
-		for (j = 0;j<3;j++) 
+		for (j = 0; j<3; j++)
 		{
 			pCarta = BAR_ObterCarta(pBaralho);
 
@@ -328,10 +328,10 @@ PTD_tpCondRet PTD_GeraMaos(BAR_tppBaralho pBaralho, PTD_tppJogadores pJogadores)
 			return PtdCondRet;
 		}
 
-		//Avança para o proximo jogador			
+		//AvanÃ§a para o proximo jogador			
 		PtdCondRet = PTD_AvancarJogador(pJogadores, 1);
 
-		if (PtdCondRet == PTD_CondRetSemJogadores) 
+		if (PtdCondRet == PTD_CondRetSemJogadores)
 		{
 			return PTD_CondRetSemJogadores;
 		}
@@ -339,18 +339,18 @@ PTD_tpCondRet PTD_GeraMaos(BAR_tppBaralho pBaralho, PTD_tppJogadores pJogadores)
 
 	return PTD_CondRetOK;
 
-}/* Fim função: PTD  &Gerar Maos */
+}/* Fim funÃ§Ã£o: PTD  &Gerar Maos */
 
  /***************************************************************************
  *
- *  Função: PTD  &Destruit Mao
+ *  FunÃ§Ã£o: PTD  &Destruit Mao
  *  ****/
-void PTD_DestruirMao(PTD_tppJogadores pJogadores) 
+void PTD_DestruirMao(PTD_tppJogadores pJogadores)
 {
 	PTD_tppDadosJogador pDadosVelhos;
 	PTD_tppDadosJogador pDadosNovos;
 
-	pDadosNovos  = (PTD_tppDadosJogador)malloc(sizeof(PTD_tpDadosJogador));
+	pDadosNovos = (PTD_tppDadosJogador)malloc(sizeof(PTD_tpDadosJogador));
 	pDadosVelhos = (PTD_tppDadosJogador)malloc(sizeof(PTD_tpDadosJogador));
 
 
@@ -361,17 +361,17 @@ void PTD_DestruirMao(PTD_tppJogadores pJogadores)
 
 	PTD_AtualizaDados(pJogadores, pDadosVelhos, pDadosNovos);
 
-}/* Fim função: PTD  &Destruir Mao */
+}/* Fim funÃ§Ã£o: PTD  &Destruir Mao */
 
 
  /***************************************************************************
  *
- *  Função: PTD  &Excluir Carta Mao
+ *  FunÃ§Ã£o: PTD  &Excluir Carta Mao
  *  ****/
 
 PTD_tpCondRet PTD_ExcluirCartaMao(PTD_tppJogadores pJogadores, PTD_tppDadosJogador pDados, int PosicaoCarta)
 {
-	//Intervalo válido para PosicaoCarta [1,3]
+	//Intervalo vÃ¡lido para PosicaoCarta [1,3]
 	//Exclui apenas uma carta de apenas um jogador
 	BAR_tpCondRet BarCondRet;
 	PTD_tpCondRet PtdCondRet;
@@ -405,21 +405,21 @@ PTD_tpCondRet PTD_ExcluirCartaMao(PTD_tppJogadores pJogadores, PTD_tppDadosJogad
 	return PTD_CondRetOK;
 
 
-}/* Fim função: PTD  &Excluir Carta Mao */
+}/* Fim funÃ§Ã£o: PTD  &Excluir Carta Mao */
 
  /***************************************************************************
  *
- *  Função: PTD  &Obter Carta Mao
+ *  FunÃ§Ã£o: PTD  &Obter Carta Mao
  *  ****/
 
-BAR_tppCarta PTD_ObterCartaMao(PTD_tppJogadores pJogadores, PTD_tppDadosJogador pDados, int PosicaoCarta) 
+BAR_tppCarta PTD_ObterCartaMao(PTD_tppJogadores pJogadores, PTD_tppDadosJogador pDados, int PosicaoCarta)
 {
 	BAR_tppCarta pCarta;
 	PTD_tppDadosJogador pDadosNovos;
 	BAR_tpCondRet BarCondRet;
 	PTD_tpCondRet PtdCondRet;
 	PtdCondRet = PTD_ProcurarJogador(pJogadores, pDados);
-	if (PtdCondRet != PTD_CondRetOK) 
+	if (PtdCondRet != PTD_CondRetOK)
 	{
 		return NULL;
 	}
@@ -436,78 +436,78 @@ BAR_tppCarta PTD_ObterCartaMao(PTD_tppJogadores pJogadores, PTD_tppDadosJogador 
 	}
 	pCarta = BAR_ObterCarta(pDadosNovos->Mao);
 	return pCarta;
-}/* Fim função: PTD  &Obter Carta Mao */
+}/* Fim funÃ§Ã£o: PTD  &Obter Carta Mao */
 
 
  /**************************************************************************
  *
- *							Funções para manipulação da Mesa
+ *							FunÃ§Ãµes para manipulaÃ§Ã£o da Mesa
  *
  ***************************************************************************/
 
  /***************************************************************************
  *
- *  Função: PTD  &Criar Mesa
+ *  FunÃ§Ã£o: PTD  &Criar Mesa
  *  ****/
 
-PTD_tppMesa PTD_CriarMesa(void) 
+PTD_tppMesa PTD_CriarMesa(void)
 {
 	PTD_tppMesa pMesa;
 
 	pMesa = BAR_CriarBaralho();
 
-	if (pMesa == NULL) 
+	if (pMesa == NULL)
 	{
 		return NULL;
 	}
 
 	return pMesa;
 
-}/*Fim função: PTD &Criar Mesa */
+}/*Fim funÃ§Ã£o: PTD &Criar Mesa */
 
  /***************************************************************************
  *
- *  Função: PTD  &Esvaziar Mesa
+ *  FunÃ§Ã£o: PTD  &Esvaziar Mesa
  *  ****/
 
-void PTD_EsvaziarMesa(PTD_tppMesa pMesa) 
+void PTD_EsvaziarMesa(PTD_tppMesa pMesa)
 {
-	BAR_LimparBaralho(pMesa); // <<<------------------------------- Trocar por função do Baralho
-}/*Fim função: PTD &Esvaziar Mesa */
+	BAR_LimparBaralho(pMesa); // <<<------------------------------- Trocar por funÃ§Ã£o do Baralho
+}/*Fim funÃ§Ã£o: PTD &Esvaziar Mesa */
 
  /***************************************************************************
  *
- *  Função: PTD  &Destruir Mesa
+ *  FunÃ§Ã£o: PTD  &Destruir Mesa
  *  ****/
 
 void PTD_DestruirMesa(PTD_tppMesa pMesa)
 {
-	BAR_DestruirBaralho(pMesa); //<<<------------------------------- Trocar por função do Baralho
-}/*Fim função: PTD &Destruir Mesa */
+	BAR_DestruirBaralho(pMesa); //<<<------------------------------- Trocar por funÃ§Ã£o do Baralho
+}/*Fim funÃ§Ã£o: PTD &Destruir Mesa */
 
  /***************************************************************************
  *
- *  Função: PTD  &Ir Inicio Mesa
+ *  FunÃ§Ã£o: PTD  &Ir Inicio Mesa
  *  ****/
 
 void PTD_IrInicioMesa(PTD_tppMesa pMesa)
 {
 	BAR_IrInicioBaralho(pMesa);
-}/*Fim função: PTD &Ir Inicio Mesa */
+}/*Fim funÃ§Ã£o: PTD &Ir Inicio Mesa */
 
  /***************************************************************************
  *
- *  Função: BAR  &Inserir carta  Mesa
+ *  FunÃ§Ã£o: BAR  &Inserir carta  Mesa
  *  ****/
 
-BAR_tppCarta PTD_ObterCartaMesa(PTD_tppMesa pMesa) 
+BAR_tppCarta PTD_ObterCartaMesa(PTD_tppMesa pMesa)
 {
 	return BAR_ObterCarta(pMesa);
 }
 
 /***************************************************************************
 *
-*  Função: BAR  &Inserir carta  Mesa
+*  FunÃ§Ã£o: BAR  &Inserir carta  Mesa
 *  ****/
 
 
@@ -523,19 +523,19 @@ PTD_tpCondRet PTD_InserirCartaMesa(PTD_tppMesa pMesa, BAR_tppCarta pCarta)
 	}
 
 	return PTD_CondRetOK;
-}/* Fim função: BAR  &Inserir Carta Mesa */
+}/* Fim funÃ§Ã£o: BAR  &Inserir Carta Mesa */
 
  /***************************************************************************
  *
- *  Função: PTD  &Avancar Carta Mesa
+ *  FunÃ§Ã£o: PTD  &Avancar Carta Mesa
  *  ****/
 
-PTD_tpCondRet PTD_AvancarCartaMesa(PTD_tppMesa pMesa, int numCarta) 
+PTD_tpCondRet PTD_AvancarCartaMesa(PTD_tppMesa pMesa, int numCarta)
 {
 	BAR_tpCondRet CondRet;
 
 	CondRet = BAR_AvancarCarta(pMesa, numCarta);
-	if (CondRet == BAR_CondRetFimBaralho) 
+	if (CondRet == BAR_CondRetFimBaralho)
 	{
 		return PTD_CondRetUltimaCartaMesa;
 	}
@@ -547,13 +547,13 @@ PTD_tpCondRet PTD_AvancarCartaMesa(PTD_tppMesa pMesa, int numCarta)
 		}
 	}
 	return PTD_CondRetOK;
-}/* Fim função: PTD  &Avançar Carta Mesa */
+}/* Fim funÃ§Ã£o: PTD  &AvanÃ§ar Carta Mesa */
 
 
 
  /***************************************************************************
  *
- *  Função: PTD  &Ordem Primordial
+ *  FunÃ§Ã£o: PTD  &Ordem Primordial
  *  ****/
 
 PTD_tppOrdenacao PTD_OrdemPrimordial(void)
@@ -569,9 +569,9 @@ PTD_tppOrdenacao PTD_OrdemPrimordial(void)
 	}
 
 	BAR_tpNaipe naipe[] = { Ouros, Espadas, Copas, Paus };
-	int	valores[]       = { 4, 5, 6, 7, 12, 11, 13, 1, 2, 3 };
+	int	valores[] = { 4, 5, 6, 7, 12, 11, 13, 1, 2, 3 };
 
-	for (i = 0;i<10;i++)
+	for (i = 0; i<10; i++)
 	{
 		if (i < 4)
 		{
@@ -579,14 +579,14 @@ PTD_tppOrdenacao PTD_OrdemPrimordial(void)
 		}
 		pOrdem->OrdemValor[i] = valores[i];
 	}
-	
+
 	return pOrdem;
 
-}/* Fim função: PTD  &Ordem Primordial */
+}/* Fim funÃ§Ã£o: PTD  &Ordem Primordial */
 
  /***************************************************************************
  *
- *  Função: PTD  &Determina Manilha
+ *  FunÃ§Ã£o: PTD  &Determina Manilha
  *  ****/
 
 
@@ -601,7 +601,7 @@ void PTD_DeterminaManilha(PTD_tppOrdenacao pOrdem, BAR_tppCarta pCartaVira)
 	}
 	else
 	{
-		for (posicao = 0;posicao < 9;posicao++)
+		for (posicao = 0; posicao < 9; posicao++)
 		{
 
 			if (pOrdem->OrdemValor[posicao] == pCartaVira->numero)
@@ -622,19 +622,19 @@ void PTD_DeterminaManilha(PTD_tppOrdenacao pOrdem, BAR_tppCarta pCartaVira)
 
 	pOrdem->OrdemValor[posicao] = ValorMax;
 
-}/* Fim função: PTD  &Determina Manilha */
+}/* Fim funÃ§Ã£o: PTD  &Determina Manilha */
 
  /***************************************************************************
  *
- *  Função: PTD  &Comparar Cartas
+ *  FunÃ§Ã£o: PTD  &Comparar Cartas
  *  ****/
 
 int PTD_ComparaCartas(BAR_tppCarta pCarta1, BAR_tppCarta pCarta2, PTD_tppOrdenacao pOrdem)
 {
-	//Retorna a posição da carta de maior forca
+	//Retorna a posiÃ§Ã£o da carta de maior forca
 	int p1 = -1, p2 = -1, i;
 
-	for (i = 0;i<10;i++)
+	for (i = 0; i < 10; i++)
 	{
 		if (pOrdem->OrdemValor[i] == pCarta1->numero)
 		{
@@ -646,6 +646,23 @@ int PTD_ComparaCartas(BAR_tppCarta pCarta1, BAR_tppCarta pCarta2, PTD_tppOrdenac
 		}
 	}
 
+	if (p1 == -1 || p2 == -1)
+	{
+		return -1;
+	}
+
+	for (i = 0; i < 4; i++)
+	{
+		if (pOrdem->OrdemNaipe[i] == pCarta1->naipe)
+		{
+			p1 += i*13;
+		}
+		if (pOrdem->OrdemNaipe[i] == pCarta2->naipe)
+		{
+			p2 += i*13;
+		}
+	}
+
 	if (p2 > p1)
 	{
 		return 2;
@@ -653,39 +670,18 @@ int PTD_ComparaCartas(BAR_tppCarta pCarta1, BAR_tppCarta pCarta2, PTD_tppOrdenac
 	else if (p1 > p2)
 	{
 		return 1;
-	}	
+	}
 	else
 	{
-		for (i = 0;i<4;i++)
-		{
-			if (pOrdem->OrdemNaipe[i] == pCarta1->naipe)
-			{
-				p1 = i;
-			}
-			if (pOrdem->OrdemNaipe[i] == pCarta2->naipe)
-			{
-				p2 = i;
-			}
-		}
-		if (p1>p2)
-		{
-			return 2;
-		}
-		if (p1>p2)
-		{
-			return 1;
-		}
-		else {
-			return 0;
-		}
+		return 0;
 	}
 }
 
 /***************************************************************************
 *
-*  Função: PTD  &Computa Vencedor Mao
+*  FunÃ§Ã£o: PTD  &Computa Vencedor Mao
 *  ****/
-int PTD_ComputaVencedorRodada(PTD_tppMesa pMesa, PTD_tppOrdenacao pOrdem) 
+int PTD_ComputaVencedorRodada(PTD_tppMesa pMesa, PTD_tppOrdenacao pOrdem)
 {
 	int i = -1,
 		id = -1,
@@ -693,38 +689,41 @@ int PTD_ComputaVencedorRodada(PTD_tppMesa pMesa, PTD_tppOrdenacao pOrdem)
 	PTD_tpCondRet PtdCondRet = PTD_CondRetOK;
 
 	BAR_tppCarta pCartaMaior;
-	BAR_tppCarta pCarta2;
+	BAR_tppCarta pCartaJogador;
 
 	pCartaMaior = (BAR_tppCarta)malloc(sizeof(BAR_tpCarta));
-	pCarta2 = (BAR_tppCarta)malloc(sizeof(BAR_tpCarta));
+	pCartaJogador = (BAR_tppCarta)malloc(sizeof(BAR_tpCarta));
 
-	if (pCartaMaior == NULL || pCarta2 == NULL)
+	if (pCartaMaior == NULL || pCartaJogador == NULL)
 	{
 		return FALSE;
 	}
 
 	//Carta mais fraca
 	pCartaMaior->numero = pOrdem->OrdemValor[0];
-	pCartaMaior->naipe = Ouros;
+	pCartaMaior->naipe  = pOrdem->OrdemNaipe[0];
 
-	i = 0;
+	i = 1;
 
 	PTD_IrInicioMesa(pMesa);
+
 	while (PtdCondRet != PTD_CondRetUltimaCartaMesa)
-	{			
-		pCarta2 = PTD_ObterCartaMesa(pMesa);
-		comp = PTD_ComparaCartas(pCartaMaior, pCarta2, pOrdem);
-		//Função Compara cartas retorna o numero da maior, 1 ou 2		
+	{
+		pCartaJogador = PTD_ObterCartaMesa(pMesa);
+		comp = PTD_ComparaCartas(pCartaMaior, pCartaJogador, pOrdem);
+		//FunÃ§Ã£o Compara cartas retorna: 2 se a segunda carta maior ,
+		//						         1 se a priemira carta maior ,
+		//								 0  se cartas iguais
 		if (comp == 2)
 		{
 			id = i;
-			pCartaMaior = pCarta2;
+			pCartaMaior = pCartaJogador;
 		}
 		PtdCondRet = PTD_AvancarCartaMesa(pMesa, 1);
 		i++;
 	}
 
-	if (id % 2 == 0) 
+	if (id % 2 == 0)
 	{
 		return EQUIPE_A;
 	}
@@ -733,34 +732,34 @@ int PTD_ComputaVencedorRodada(PTD_tppMesa pMesa, PTD_tppOrdenacao pOrdem)
 		return EQUIPE_B;
 	}
 
-}/* Fim função: PTD  &Computa Vencedor Mao */
+}/* Fim funÃ§Ã£o: PTD  &Computa Vencedor Mao */
 
  /***************************************************************************
  *
- *  Função: PTD  &Remover Carta Mesa Corrente
+ *  FunÃ§Ã£o: PTD  &Remover Carta Mesa Corrente
  *  ****/
 PTD_tpCondRet PTD_RemoverCartaMesaCorrente(PTD_tppMesa pMesa)
 {
 	BAR_tpCondRet BarCondRet;
 	BarCondRet = BAR_RemoverCartaCorrente(pMesa);
 
-	if (BarCondRet != BAR_CondRetOK) 
+	if (BarCondRet != BAR_CondRetOK)
 	{
 		return PTD_CondRetErroBaralho;
 	}
 
 	return PTD_CondRetOK;
 
-}/* Fim função: PTD  &Remover Carta Mesa Corrente */
+}/* Fim funÃ§Ã£o: PTD  &Remover Carta Mesa Corrente */
 
  /***************************************************************************
  *
- *  Função: PTD  &Jogar Carta Mesa
+ *  FunÃ§Ã£o: PTD  &Jogar Carta Mesa
  *  ****/
 
-PTD_tpCondRet PTD_JogarCartaMesa(PTD_tppMesa pMesa, PTD_tppJogadores pJogadores, int PosicaoCarta) 
+PTD_tpCondRet PTD_JogarCartaMesa(PTD_tppMesa pMesa, PTD_tppJogadores pJogadores, int PosicaoCarta)
 {
-	//PosicaoCarta é a posição da carta que o jogador deseja jogar
+	//PosicaoCarta Ã© a posiÃ§Ã£o da carta que o jogador deseja jogar
 	BAR_tppCarta pCarta;
 	PTD_tpCondRet CondRet;
 	PTD_tppDadosJogador pDados;
@@ -789,17 +788,17 @@ PTD_tpCondRet PTD_JogarCartaMesa(PTD_tppMesa pMesa, PTD_tppJogadores pJogadores,
 
 	//
 	//
-	//								ATENÇÃO
-	//		NA IMPLEMENTAÇÃO, A MESA DEVERA SER ESVAZIADA E/OU DESTRUIDA A CADA RODADA E A CADA MAO
+	//								ATENÃ‡ÃƒO
+	//		NA IMPLEMENTAÃ‡ÃƒO, A MESA DEVERA SER ESVAZIADA E/OU DESTRUIDA A CADA RODADA E A CADA MAO
 	//
 
-}/* Fim função: PTD  &Jogar Carta Mesa */
+}/* Fim funÃ§Ã£o: PTD  &Jogar Carta Mesa */
 
 
 
  /***************************************************************************
  *
- *  Função: PTD  &Obter Equipe Corrente
+ *  FunÃ§Ã£o: PTD  &Obter Equipe Corrente
  *  ****/
 
 int PTD_ObterEquipeCorrente(PTD_tppJogadores pJogadores)
@@ -809,11 +808,11 @@ int PTD_ObterEquipeCorrente(PTD_tppJogadores pJogadores)
 	pDados = PTD_ObterDadosJogador(pJogadores);
 
 	return pDados->Equipe;
-}/* Fim função: PTD  &Obter Equipe Corrente */
+}/* Fim funÃ§Ã£o: PTD  &Obter Equipe Corrente */
 
  /***************************************************************************
  *
- *  Função: PTD  &Mao De Onze
+ *  FunÃ§Ã£o: PTD  &Mao De Onze
  *  ****/
 
 void PTD_MaoDeOnze(PTD_tppJogadores pJogadores, int Equipe)
@@ -826,14 +825,14 @@ void PTD_MaoDeOnze(PTD_tppJogadores pJogadores, int Equipe)
 	{
 		printf("\n Equipe A veja as cartas de seus integrantes\n");
 	}
-	else 
+	else
 	{
 		printf("\n Equipe B veja as cartas de seus integrantes\n");
-		PtdCondRet = PTD_AvancarJogador(pJogadores, 1);		
-	}	
+		PtdCondRet = PTD_AvancarJogador(pJogadores, 1);
+	}
 
 	while (PtdCondRet != PTD_CondRetUltimoJogador)
-	{	
+	{
 		if (PtdCondRet == PTD_CondRetOK)
 		{
 			PTD_ImprimeMao(pJogadores);
@@ -842,25 +841,25 @@ void PTD_MaoDeOnze(PTD_tppJogadores pJogadores, int Equipe)
 		PtdCondRet = PTD_AvancarJogador(pJogadores, 2);
 	}
 
-}/* Fim função: PTD  &Mao de Onze */
+}/* Fim funÃ§Ã£o: PTD  &Mao de Onze */
 
 
  /***************************************************************************
  *
- *  Função: PTD  &Menu Aumentar Partida
+ *  FunÃ§Ã£o: PTD  &Menu Aumentar Partida
  *  ****/
 
 int PTD_MenuAumentarPontos(void)
 {
 	int opcao = -1;
-	while ( 1 ) 
+	while (1)
 	{
 		printf("\n\t Menu:\n \n Escolha uma opcao:\n");
 		printf("\n Digite 1 para pedir truco:");
 		printf("\n Digite 2 para pedir retruco:");
 		printf("\n Digite 99 para continuar sem aumentar a partida:");
 		scanf("%d", &opcao);
-		if ((opcao == 1) || (opcao == 2) || (opcao == 99)) 
+		if ((opcao == 1) || (opcao == 2) || (opcao == 99))
 		{
 			break;
 		}
@@ -870,19 +869,19 @@ int PTD_MenuAumentarPontos(void)
 		}
 	}
 	return opcao;
-}/* Fim função: PTD  &Menu Aumentar Pontos */
+}/* Fim funÃ§Ã£o: PTD  &Menu Aumentar Pontos */
 
  /***************************************************************************
  *
- *  Função: PTD  &Print Ordem
+ *  FunÃ§Ã£o: PTD  &Print Ordem
  *  ****/
 
-void PTD_PrintOrdem(PTD_tppOrdenacao pOrdem) 
+void PTD_PrintOrdem(PTD_tppOrdenacao pOrdem)
 {
 	int i, a;
 	printf("\n\nDa menor para a maior\n");
 	printf("Ordem de forca: \n");
-	for (i = 0;i<10;i++) 
+	for (i = 0; i<10; i++)
 	{
 		a = pOrdem->OrdemValor[i];
 		printf("%d; ", a);
@@ -890,11 +889,11 @@ void PTD_PrintOrdem(PTD_tppOrdenacao pOrdem)
 	printf("\n\n Ordem Naipe:\n");
 	printf("\n Ouros; Espadas; Copas; Paus\n");
 
-}/* Fim função: PTD  &Imprime Ordem da forca das cartas */
+}/* Fim funÃ§Ã£o: PTD  &Imprime Ordem da forca das cartas */
 
  /***************************************************************************
  *
- *  Função: PTD  &Imprime carta
+ *  FunÃ§Ã£o: PTD  &Imprime carta
  *  ****/
 
 void PTD_PrintCarta(BAR_tppCarta carta)
@@ -907,14 +906,14 @@ void PTD_PrintCarta(BAR_tppCarta carta)
 	{
 		printf(" _________\n|         |\n|         |\n|%d %c|\n|         |\n|_________|\n", carta->numero, carta->naipe - 2);
 	}
-}/* Fim função: PTD  &Imprime carta */
+}/* Fim funÃ§Ã£o: PTD  &Imprime carta */
 
  /***************************************************************************
  *
- *  Função: PTD  &Imprime jogador
+ *  FunÃ§Ã£o: PTD  &Imprime jogador
  *  ****/
 
-void PTD_PrintCartaMesa(PTD_tppMesa pMesa, int Virada) 
+void PTD_PrintCartaMesa(PTD_tppMesa pMesa, int Virada)
 {
 	BAR_tppCarta pCarta;
 
@@ -931,15 +930,15 @@ void PTD_PrintCartaMesa(PTD_tppMesa pMesa, int Virada)
 	{
 		PTD_PrintCartaVirada();
 	}
-	else 
+	else
 	{
 		PTD_PrintCarta(pCarta);
 	}
 
-}/* Fim função: PTD  &Imprime jogador */
+}/* Fim funÃ§Ã£o: PTD  &Imprime jogador */
  /***************************************************************************
  *
- *  Função: PTD  &Imprime jogador
+ *  FunÃ§Ã£o: PTD  &Imprime jogador
  *  ****/
 
 void PTD_PrintJogador(PTD_tppJogadores pJogadores, int PontosEquipe)
@@ -948,11 +947,11 @@ void PTD_PrintJogador(PTD_tppJogadores pJogadores, int PontosEquipe)
 	pDados = PTD_ObterDadosJogador(pJogadores);
 	printf("::::::Jogador::::::\nNome: %s\nEquipe: %d\nId: %d\nPontos: %d\n", pDados->Nome, pDados->Equipe, pDados->Id, PontosEquipe);
 	PTD_ImprimeMao(pJogadores);
-}/* Fim função: PTD  &Imprime jogador */
+}/* Fim funÃ§Ã£o: PTD  &Imprime jogador */
 
  /***************************************************************************
  *
- *  Função: PTD  &Imprime mao
+ *  FunÃ§Ã£o: PTD  &Imprime mao
  *  ****/
 
 void PTD_ImprimeMao(PTD_tppJogadores pJogadores)
@@ -980,27 +979,27 @@ void PTD_ImprimeMao(PTD_tppJogadores pJogadores)
 		PTD_PrintCarta(carta);
 		CondRet = BAR_AvancarCarta(pDados->Mao, 1);
 	}
-}/* Fim função: PTD  &Imprime MAO */
+}/* Fim funÃ§Ã£o: PTD  &Imprime MAO */
 
  /***************************************************************************
  *
- *  Função: PTD  &Imprime Carta virada
+ *  FunÃ§Ã£o: PTD  &Imprime Carta virada
  *  ****/
 
-void PTD_PrintCartaVirada(void) 
+void PTD_PrintCartaVirada(void)
 {
 	printf(" _________\n|         |\n|  CARTA  |\n|  VIRADA |\n|         |\n|_________|\n");
 }
 
 /***************************************************************************
 *
-*  Função: PTD  &Menu Aumentar Partida
+*  FunÃ§Ã£o: PTD  &Menu Aumentar Partida
 *  ****/
 
 void PTD_IniciaPartida(void)
 {
 
-	//Condições de retorno
+	//CondiÃ§Ãµes de retorno
 	BAR_tpCondRet BarCondRet;
 	PTD_tpCondRet PtdCondRet;
 	EMB_tpCondRet EmbCondRet;
@@ -1012,16 +1011,16 @@ void PTD_IniciaPartida(void)
 	int PosicaoCarta = -1;
 	int Opcao, verificador;
 	int Equipe, VencedorRodada;
-	//Cada linha é um equipe e a coluna corresponde aos valores da equipe e a pontucação global
+	//Cada linha Ã© um equipe e a coluna corresponde aos valores da equipe e a pontucaÃ§Ã£o global
 
 	int MaoOnzeFerro;
-	//Verifica se a mão de onze ou de ferro foi atingida
+	//Verifica se a mÃ£o de onze ou de ferro foi atingida
 
 	int ChecaTruco;
 	//Consta a equipe que pediu truco
 
 	int ValorPartida;
-	//Pontuação corrente
+	//PontuaÃ§Ã£o corrente
 
 
 	//Baralho
@@ -1045,7 +1044,7 @@ void PTD_IniciaPartida(void)
 
 	//Tipo de ordem das cartas
 	PTD_tppOrdenacao pOrdem;
-	//Gera Ordem primordial de força
+	//Gera Ordem primordial de forÃ§a
 	pOrdem = PTD_OrdemPrimordial();
 
 	// Mesa
@@ -1057,11 +1056,11 @@ void PTD_IniciaPartida(void)
 	pJogadores = PTD_CriarJogadoresLista();
 
 	//Inicializa Variaveis de controle;	
-	//1° e 2° elementos da 1° coluna da matriz são as equipes
+	//1Â° e 2Â° elementos da 1Â° coluna da matriz sÃ£o as equipes
 	PontuacaoPartida[0][0] = EQUIPE_A;
 	PontuacaoPartida[1][0] = EQUIPE_B;
 
-	//1° e 2° elementos da 2° coluna da matriz são os pontos das equipes
+	//1Â° e 2Â° elementos da 2Â° coluna da matriz sÃ£o os pontos das equipes
 	PontuacaoPartida[0][1] = 0;
 	PontuacaoPartida[1][1] = 0;
 
@@ -1087,14 +1086,14 @@ void PTD_IniciaPartida(void)
 	//Armazena os dados dos jogadores
 	printf("\n\nAgora cada jogador ira digitar seus dados, atencao:\n\n");
 
-	for (i = 0;i < numJogadores;i++) 
+	for (i = 0; i < numJogadores; i++)
 	{
 		printf("\nJogador numero 0%d\n", i + 1);
 		printf("\n Digite seu nome \n\n");
 
 		scanf("%s", pDados->Nome);
 
-		// Jogadores de números pares são da equipe A, ímpares da equipe B
+		// Jogadores de nÃºmeros pares sÃ£o da equipe A, Ã­mpares da equipe B
 		if ((i % 2) == 0)
 		{
 			printf("\n\tVoce sera da equipe A\n\n");
@@ -1125,13 +1124,13 @@ void PTD_IniciaPartida(void)
 
 	MaoOnzeFerro = 0;
 
-	//O jogo termina quando a pontuação de alguma equipe atingir 12	
+	//O jogo termina quando a pontuaÃ§Ã£o de alguma equipe atingir 12	
 	while ((PontuacaoPartida[0][1] < 12) && (PontuacaoPartida[1][1] < 12))
 	{
 
 
 		BarCondRet = BAR_CriarBaralhoTruco(pBaralho);
-		if (BarCondRet != BAR_CondRetOK) 
+		if (BarCondRet != BAR_CondRetOK)
 		{
 			printf("\n Erro na criacao do baralho - erro %d! \n", BarCondRet);
 			exit(1);
@@ -1147,7 +1146,7 @@ void PTD_IniciaPartida(void)
 
 		//Ponto de Inicio da mao
 
-		//Determinação do vira
+		//DeterminaÃ§Ã£o do vira
 		pCartaVira = BAR_ObterCarta(pBaralho);
 
 		printf("\n\n\n");
@@ -1159,7 +1158,7 @@ void PTD_IniciaPartida(void)
 		//Remove do Baralho a carta que foi obtida
 		BarCondRet = BAR_RemoverCartaCorrente(pBaralho);
 
-		if (BarCondRet != BAR_CondRetOK) 
+		if (BarCondRet != BAR_CondRetOK)
 		{
 			printf("\nErro na remocao de cartas - erro %d\n", BarCondRet);
 		}
@@ -1172,7 +1171,7 @@ void PTD_IniciaPartida(void)
 		//Gera as Maos de todos os jogadores da partida
 		PtdCondRet = PTD_GeraMaos(pBaralho, pJogadores);
 
-		if (PtdCondRet != PTD_CondRetOK) 
+		if (PtdCondRet != PTD_CondRetOK)
 		{
 			printf("Erro na criacao das maos dos jogadores");
 			exit(1);
@@ -1182,7 +1181,7 @@ void PTD_IniciaPartida(void)
 		ChecaTruco = 0;
 		ValorPartida = 1;
 
-		//A mão reinicia após 3 rodadas
+		//A mÃ£o reinicia apÃ³s 3 rodadas
 		while (Rodada < 3)
 		{ //Inicio while 1.0
 			i = 0;
@@ -1192,7 +1191,7 @@ void PTD_IniciaPartida(void)
 			while (i < numJogadores)
 			{ //Inicio while 2.0
 
-									 //Condição da mão de FERRO
+			  //CondiÃ§Ã£o da mÃ£o de FERRO
 				if ((PontuacaoPartida[0][1] == 11) && (PontuacaoPartida[1][1] == 11))
 				{
 					system("cls");
@@ -1203,7 +1202,7 @@ void PTD_IniciaPartida(void)
 				}
 				else
 				{
-					//Condição da mão de onze
+					//CondiÃ§Ã£o da mÃ£o de onze
 					if ((PontuacaoPartida[0][1] == 11) || (PontuacaoPartida[1][1] == 11))
 					{
 						system("cls");
@@ -1237,14 +1236,14 @@ void PTD_IniciaPartida(void)
 
 				Equipe = PTD_ObterEquipeCorrente(pJogadores);
 
-				//Imprime os dados do jogador e sua mão e pontuação da equipe
+				//Imprime os dados do jogador e sua mÃ£o e pontuaÃ§Ã£o da equipe
 				PTD_PrintJogador(pJogadores, PontuacaoPartida[Equipe - 101][1]);
 
 				verificador = PTD_PARA;
 				Opcao = 0;
 				if ((ValorPartida == 3) && (MaoOnzeFerro == 0))
 				{
-					//Validação da dinamica de truco
+					//ValidaÃ§Ã£o da dinamica de truco
 
 					while (verificador == PTD_PARA)
 					{
@@ -1262,7 +1261,7 @@ void PTD_IniciaPartida(void)
 
 					if (Opcao == 2)
 					{
-						//Caso em que os aversários fogem do truco
+						//Caso em que os aversÃ¡rios fogem do truco
 
 						if (Equipe == EQUIPE_B)
 						{
@@ -1278,7 +1277,7 @@ void PTD_IniciaPartida(void)
 
 					else
 					{
-						//Caso em que os aversários aceitam o truco
+						//Caso em que os aversÃ¡rios aceitam o truco
 						verificador = PTD_PARA;
 
 						while (verificador == PTD_PARA)
@@ -1286,7 +1285,7 @@ void PTD_IniciaPartida(void)
 
 							if (MaoOnzeFerro != PTD_MAOFERRO)
 							{
-								//Na mão de Ferro não pode pedir Truco
+								//Na mÃ£o de Ferro nÃ£o pode pedir Truco
 
 								Opcao = PTD_MenuAumentarPontos();
 
@@ -1355,7 +1354,7 @@ void PTD_IniciaPartida(void)
 
 				PtdCondRet = PTD_JogarCartaMesa(pMesa, pJogadores, PosicaoCarta);
 
-				//Caso em que foi atingida a mão de ferro
+				//Caso em que foi atingida a mÃ£o de ferro
 				if (MaoOnzeFerro == PTD_MAOFERRO)
 				{
 					PTD_PrintCartaMesa(pMesa, TRUE);
@@ -1404,7 +1403,7 @@ void PTD_IniciaPartida(void)
 
 		}//fim while 2.0
 
-		if (verificador != PTD_FUGIU) 
+		if (verificador != PTD_FUGIU)
 		{
 			VencedorRodada = PTD_ComputaVencedorRodada(pMesa, pOrdem);
 
@@ -1422,7 +1421,7 @@ void PTD_IniciaPartida(void)
 		PTD_DestruirMesa(pMesa);
 	} //Fim while 1.0	
 
-		  //BAR_DestruirBaralho() <--------------------
+	  //BAR_DestruirBaralho() <--------------------
 	PTD_DestruirMesa(pBaralho);
 
 
